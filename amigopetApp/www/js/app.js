@@ -58,6 +58,14 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         }
       }
     })
+    .state('app.cadastrar_doacao', {
+      url: '/cadastrar_doacao',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/cadastrar_doacao.html'
+        }
+      }
+    })
 
   .state('app.single', {
     url: '/playlists/:playlistId',

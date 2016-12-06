@@ -1,9 +1,20 @@
-<ion-view view-title="Playlists">
+<ion-view view-title="Doações">
   <ion-content>
     <ion-list>
-      <ion-item ng-repeat="playlist in playlists" href="#/app/playlists/{{playlist.id}}">
-        {{playlist.title}}
-      </ion-item>
+      <ion-item-sliding>
+        <ion-item ng-repeat="playlist in playlists" href="#/app/playlists/{{playlist.id}}">
+          <!--{{playlist.title}}-->
+          <ion-thumbnail style="float:left; margin-right:15px;">
+            <img src="https://lh4.googleusercontent.com/-n4-L7BRqptc/AAAAAAAAAAI/AAAAAAAAAA8/bvKh2NjgCeI/photo.jpg" 
+            style="border-radius:50%; width:63px; height:63px">
+          </ion-thumbnail>
+          <div style="float:left;">
+            <h2>{{playlist.title}}</h2>
+            <p>{{playlist.subtitle}}</p>
+            <p>{{playlist.location}}</p>
+          </div>
+        </ion-item>
+      </ion-item-sliding>
     </ion-list>
   </ion-content>
   <ion-tabs class="tabs-light tabs-icon-top">
